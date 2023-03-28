@@ -16,5 +16,5 @@ logging.basicConfig(
 
 )
 
-if __name__ =="__main__":
-    logging.info("Is it working or not,,,,Check Check Suraj!!!")
+# if __name__ =="__main__":
+#     logging.info("Is it working or not,,,,Check Check Suraj!!!")

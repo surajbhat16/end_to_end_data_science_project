@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <div class="center">
+        <h2 style= "background-color: rgba(6, 168, 255, 0.975) ;color: #0b0b0b">EXAM PERFORMANCE INDICATOR</h2>
+    </div>
+        <style>
+            .button {
+              background-color: #f59c0c; 
+              border: none;
+              color: #0b0b0b;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+            .center {
+        text-align: center
+            }
+            
+            .buttonscore {font-size: 24px;}
+            </style>
+        
+            
+    </head>
+<body style="background-color: rgba(140, 143, 144, 0.123)">
+
+<form action="{{ url_for('predict_datapoint')}}" method="post">
+    <h3 class = "center" style="color:red">
+        Gender
+        </h3> 
+    <div class="center">
+    <input font-family:monospace type="radio" id="radio-gender-1" name="gender" value="male"/>
+	<label for="radio-gender-1">Male</label>
+	<input type="radio" id="radio-gender-2" name="gender" value="female" checked/>
+	<label for="radio-gender-2">Female</label>
+    </div>
+    </p>
+    <h3 class = "center" style="color:red ">
+        Ethnicity
+        </h3> 
+    
+    <div class="center">
+    <input type="radio" id="re1" name="ethnicity" value="group A"/>
+	<label for="re1">group A</label>
+	<input type="radio" id="re2" name="ethnicity" value="group B"/>
+	<label for="re1">group B</label>
+    <input type="radio" id="re3" name="ethnicity" value="group C"/>
+	<label for="re3">group C</label>
+    <input type="radio" id="re4" name="ethnicity" value="group D"/>
+	<label for="re4">group D</label>
+    <input type="radio" id="re5" name="ethnicity" value="group E"/>
+	<label for="re5">group E</label>
+    </div>
+
+    <h3 class = "center" style="color:red">
+        Parental level of education
+    </h3>
+    
+    <div class="center">
+    <input type="radio" id="rp1" name="parental_level_of_education" value="associate's degree"/>
+	<label for="rp1">associate's degree</label>
+    <input type="radio" id="rp2" name="parental_level_of_education" value="bachelor's degree"/>
+	<label for="rp2">bachelor's degree</label>
+    <input type="radio" id="rp3" name="parental_level_of_education" value="high school"/>
+	<label for="rp3">high school</label>
+    <input type="radio" id="rp4" name="parental_level_of_education" value="master's degree"/>
+	<label for="rp4">master's degree</label>
+    <input type="radio" id="rp5" name="parental_level_of_education" value="some college"/>
+	<label for="rp5">some college</label>
+    <input type="radio" id="rp6" name="parental_level_of_education" value="some high school"/>
+	<label for="rp6">some high school</label>
+    </div>
+
+
+    <h3 class = "center" style="color:red">
+        Lunch</h3>
+    <div class="center">
+        <input type="radio" id="rl1" name="lunch" value="free/reduced"/>
+        <label for="rl1">free/reduced</label>
+        <input type="radio" id="rl2" name="lunch" value="standard"/>
+        <label for="rl2">standard</label>
+    </div>
+
+    <h3 class = "center" style="color:red">
+        Test preparation course</h3>
+
+    <div class="center">
+        <input type="radio" id="rt1" name="test_preparation_course" value="none"/>
+        <label for="rt1">none</label>
+        <input type="radio" id="rt2" name="test_preparation_course" value="completed"/>
+        <label for="rt2">completed</label>
+    </div>
+
+    <div>
+    <div class="center">  
+    <h3 style="color:red">
+        Writting Score</h3>
+    <input type="text" id="writing_score" class="floatLabel" name="writing_score" value="100">
+    </div>
+    <div class="center">
+    <h3 style="color:red">
+        Reading Score</h3>
+    <input type="text" id="reading_score" class="floatLabel" name="reading_score" value="100">
+    </div>
+    <div class="center">  
+    <br>
+    <br>
+   
+    <button class="button buttonscore , center" type="submit">Predict Score</button>
+    </div>
+</form> 
+<br>
+<br>
+
+<div class="center">  
+
+<h3 style="color:rgb(17, 16, 16)">
+    Predicted Maths Score of the student is: {{results}}</h3>
+</div>
+</body>
+</html>

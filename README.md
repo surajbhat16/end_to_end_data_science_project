@@ -1,6 +1,6 @@
 # Student Exam Marks Prediction
 
-<img width="518" alt="app_pic" src="https://user-images.githubusercontent.com/89142569/229308530-fba4c588-e244-4693-8629-99b1954b0248.PNG">
+<img width="695" alt="Capture" src="https://user-images.githubusercontent.com/89142569/229309274-80d5d987-14c3-4840-8457-e31b2dc9e1fb.PNG">
 
 
 This data science project walks through the end to end implementation of prediction of a student marks. The code structure almost replicates the modular architecture. At first, a machine learning model is built and the best model among the various algoetihms is choosen. A flask server is written that takes the model to serve http requests.A website is built using the html

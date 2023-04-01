@@ -1,5 +1,8 @@
 # Student Exam Marks Prediction
 
+<img width="518" alt="app_pic" src="https://user-images.githubusercontent.com/89142569/229308530-fba4c588-e244-4693-8629-99b1954b0248.PNG">
+
+
 This data science project walks through the end to end implementation of prediction of a student marks. The code structure almost replicates the modular architecture. At first, a machine learning model is built and the best model among the various algoetihms is choosen. A flask server is written that takes the model to serve http requests.A website is built using the html
 that allows the user to enter the various parameters required to the predict the marks. Later the docker
 container is built with the model and deployed to the heroku cloud. The entire process is done automatically by using GitHub actions.

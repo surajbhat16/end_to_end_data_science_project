@@ -10,6 +10,10 @@ class PredictPipeline:
         pass
     
     def predict(self,features):
+        '''
+        Getting all the model for prediction
+        
+        '''
         try:
             model_path='artifacts/model.pkl'
             preprocessor_path='artifacts/proprocessor.pkl'

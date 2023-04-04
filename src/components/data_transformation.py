@@ -79,14 +79,14 @@ class DataTransformation:
             train_df=pd.read_csv(train_path)
             test_df=pd.read_csv(test_path)
 
-            logging.info("Read train and test data completed")
-
-            logging.info("Obtaining preprocessing object")
+            logging.info("Reading the train and test data after the split is done in ingestion stage")
 
             preprocessing_obj=self.get_data_transformer_object()
 
+            logging.info("Obtaining preprocessing object")
+
             target_column_name="math_score"
-            numerical_columns = ["writing_score", "reading_score"]
+            #numerical_columns = ["writing_score", "reading_score"]
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
